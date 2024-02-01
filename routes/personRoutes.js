@@ -1,6 +1,8 @@
+//[✅]Importaçõs
 const router = require('express').Router()
 const Person = require('../models/Person')
 
+//[✅]
 //@desc Criar uma pessoa
 //@route POST
 router.post('/', async(req, res) => {
@@ -20,7 +22,7 @@ router.post('/', async(req, res) => {
         approved
     }
 
-    //criação
+    //[✅]Criação de pessoa no sistema
     try{
 
         await Person.create(person)
@@ -34,6 +36,7 @@ router.post('/', async(req, res) => {
 
 })
 
+//[✅]
 //@desc Leitura de todos dados
 //@route GET
 router.get('/', async (req, res) => {
@@ -49,6 +52,7 @@ router.get('/', async (req, res) => {
     }
 })
 
+//[✅]
 //@desc Leitura de dados por ID
 //@route GET
 router.get('/:id', async(req, res) => {
@@ -70,6 +74,7 @@ router.get('/:id', async(req, res) => {
     }
 })
 
+//[✅]
 //@desc Atualizar dados
 //@route PATCH
 router.patch('/:id', async(req, res) => {
@@ -98,6 +103,7 @@ router.patch('/:id', async(req, res) => {
     }
 })
 
+//[✅]
 //@desc Deletar dados
 //@route DELETE
 router.delete('/:id', async(req, res) => {
